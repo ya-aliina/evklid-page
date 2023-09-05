@@ -4,55 +4,71 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Evklid</title>
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- tab icon -->
+	<link rel="shortcut icon" href="./img/tab-icon.svg">
+
+	<!-- tab icon for MS Edge -->
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./img/tab-icon.svg">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- tab icon for IOS -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/tab-icon.svg">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- styles -->
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
 
 <!-- ================= HEADER start ================= -->
 	<header class="header">
 		<div class="container header__container">
-			<!-- <button class="header__burger-btn">
+			<button class="header__burger-btn border-focus">
 				<svg class="header__burger-btn-img" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect width="30" height="3" fill="#333333" />
 					<rect y="10" width="30" height="3" fill="#333333" />
 					<rect y="20" width="30" height="3" fill="#333333" />
 				</svg>
-			</button> -->
+			</button>
 			<a class="header__logo-link" href="#">
 				<img class="header__logo-img" src="../img/logo.svg" alt="Логотип компании Евклид">
 			</a>
 			<nav class="header__main-nav">
 				<ul class="header__nav-list">
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#">
+						<a class="header__nav-link border-focus" href="#">
 							О нас
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#">
+						<a class="header__nav-link border-focus" href="#">
 							Проекты
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#">
+						<a class="header__nav-link border-focus" href="#">
 							Этапы
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#">
+						<a class="header__nav-link border-focus" href="#">
 							Отзывы
 						</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-link" href="#">
+						<a class="header__nav-link border-focus" href="#">
 							Контакты
 						</a>
 					</li>
 				</ul>
 			</nav>
-			<button class="header__search-btn">
-				<svg class="header__search-btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" class="header__search-btn-icon">
+			<button class="header__search-btn border-focus">
+				<svg class="header__search-btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
 					<path fill="#333" d="M18.606 17.376 24 22.675l-1.348 1.324-5.394-5.298z" />
 					<path stroke="#333" stroke-width="2"
 						d="M20.93 10.773c0 5.38-4.445 9.772-9.965 9.772S1 16.153 1 10.773C1 5.392 5.445 1 10.965 1s9.965 4.392 9.965 9.773Z" />
@@ -100,14 +116,13 @@
 				</p>
 				<div class="about-us__cards-container">
 					<div class="about-us__hero-card">
-						<!-- <img class="about-us__hero-card-image" src="" alt=""> -->
 						<div class="about-us__overlay">
 							<div class="about-us__overlay-text">
 								Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации
 								новых
 								принципов.
 							</div>
-							<a class="about-us__hero-card-link accent-btn-bordered" href="#">
+							<a class="about-us__hero-card-btn accent-btn-bordered" href="#">
 								Подробнее
 							</a>
 						</div>
@@ -150,29 +165,29 @@
 				</h2>
 				<ul class="how-we-work__nav">
 					<li class="how-we-work__nav-item">
-						<a href="" class="how-we-work__nav-link">
+						<a href="" class="how-we-work__nav-link border-focus">
 							1 шаг
 						</a>
 					</li>
 					<li class="how-we-work__nav-item">
-						<a href="" class="how-we-work__nav-link">
+						<a href="" class="how-we-work__nav-link border-focus">
 							2 шаг
 						</a>
 					</li>
 					<li class="how-we-work__nav-item">
-						<a href="" class="how-we-work__nav-link">
+						<a href="" class="how-we-work__nav-link border-focus">
 							3 шаг
 						</a>
 					</li>
 					<li class="how-we-work__nav-item">
-						<a href="" class="how-we-work__nav-link">
+						<a href="" class="how-we-work__nav-link border-focus">
 							4 шаг
 						</a>
 					</li>
 				</ul>
+
 				<div class="how-we-work__info-container">
-					
-					<div class="how-we-work__left-column">
+					<div class="how-we-work__description-column">
 						<h3 class="how-we-work__sub-heading">
 							Проводим консультацию
 						</h3>
@@ -194,7 +209,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="how-we-work__right-column"></div>
+					<div class="how-we-work__img-column"></div>
 				</div>
 			</div>
 		</section>
@@ -225,7 +240,7 @@
 					<li class="faq__item">
 						<div class="faq__question">
 							<span class="faq__question-text">
-								У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+								У меня есть свой проект. Сможем ли мы его доработать <span class="fade-text">/</span> реализовать?
 							</span>
 							<button class="faq__question-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
@@ -255,7 +270,7 @@
 					<li class="faq__item">
 						<div class="faq__question">
 							<span class="faq__question-text">
-								Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
+								Могу ли я делегировать вам работу <span class="fade-text">/</span> согласование с подрядчиком <span class="fade-text">/</span> организацией?
 							</span>
 							<button class="faq__question-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
@@ -298,44 +313,44 @@
 				</a>
 				<ul class="footer__nav-list">
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							О нас
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Проекты
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Отзывы
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Договор оферты
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Договор подряда
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Конфиденциальность
 						</a>
 					</li>
 					<li class="footer__nav-item">
-						<a class="footer__nav-link" href="#">
+						<a class="footer__nav-link border-focus" href="#">
 							Партнёрское соглашение
 						</a>
 					</li>
 				</ul>
 				<ul class="footer__social-media-list">
 					<li class="footer__social-media-item">
-						<a class="footer__social-media-link" href="#">
+						<a class="footer__social-media-link border-focus" href="#">
 							<svg class="footer__social-media-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M30 0C13.5 0 0 13.5241 0 30.1807C0 45.241 10.98 57.741 25.32 60V38.9157H17.7V30.1807H25.32V23.5241C25.32 15.9639 29.79 11.8072 36.66 11.8072C39.93 11.8072 43.3499 12.3795 43.3499 12.3795V19.8193H39.57C35.85 19.8193 34.68 22.1386 34.68 24.5181V30.1807H43.0199L41.6699 38.9157H34.68V60C41.7493 58.8791 48.1866 55.2576 52.8297 49.7893C57.4729 44.3211 60.016 37.3664 59.9999 30.1807C59.9999 13.5241 46.4999 0 30 0Z"
@@ -343,8 +358,8 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-media-item">
-						<a class="footer__social-media-link" href="#">
+					<li class="footer__social-media-item ">
+						<a class="footer__social-media-link border-focus" href="#">
 							<svg class="footer__social-media-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
 								<g fill="#7C7C7C" clip-path="url(#a)">
 									<path d="M24.258 30a5.742 5.742 0 1 0 11.484 0 5.742 5.742 0 0 0-11.484 0Z" />

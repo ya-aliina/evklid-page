@@ -1,0 +1,326 @@
+
+/* ================= 1490px ================= */
+@media (max-width: 1492px) {
+	.about-us__cards-list {
+		padding-left: 0;
+	}
+
+	.about-us__hero-card {
+		margin-bottom: 32px;
+	}
+
+	.footer__text-column {
+		display: none;
+	}
+
+	.footer__form-column {
+		transform: none;
+	}
+}
+
+/* ================= 1174px ================= */
+@media (max-width: 1174px) {
+	.header__burger-btn {
+		display: inline-block;
+	}
+
+	.header__main-nav {
+		display: none;
+	}
+
+	.how-we-work__description-column {
+		margin-right: 48px;
+	}
+}
+
+/* ================= 1024px ================= */
+@media (max-width: 1024px) {
+	header,
+	section,
+	footer {
+		padding: 0 42px;
+	}
+
+	.container {
+		max-width: 924px;
+	}
+
+	.section__heading {
+		margin-top: 80px;
+	}
+
+	/*------ header ------*/
+
+	.header__container {
+		justify-content: space-between;
+	}
+
+	.header__logo-img {
+		width: 150px;
+		height: 48px;
+		margin-right: 0;
+		transform: translateX(-3px);
+	}
+
+	/*------ about us ------*/
+
+	.about-us__text {
+		margin-top: 8px;
+	}
+	
+	.about-us__cards-container {
+		margin-top: 63px;
+	}
+
+	.about-us__hero-card {
+		margin-right: 0;
+		width: 100%;
+		min-height: 641px;
+	}
+
+	.about-us__card {
+		padding: 65px 77px;
+	}
+
+	/*------ hero ------*/
+
+	.hero__info-container {
+		top: 162px;
+		left: 77px;
+		margin-right: 77px;
+		max-width: 780px;
+	}
+
+	.hero__slider {
+		height: 670px;
+	}
+
+	.hero__heading {
+		font-size: 60px;
+	}
+
+	.hero__description {
+		margin-top: 16px;
+		font-size: 20px;
+	}
+
+	.hero__btn {
+		margin-top: 60px;
+		font-size: 24px;
+		padding: 22px 32px;
+	}
+
+	.how-we-work__btn-container {
+		margin-top: 25px;
+	}
+
+	/*------ faq ------*/
+
+	.faq__list {
+		margin-top: 33px;
+	}
+
+	.faq__question-text {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	/*------ footer ------*/
+
+	.footer {
+		margin-top: 82px;
+	}
+
+	.footer__form {
+		transform: translateX(30px);
+		max-width: 540px;
+	}
+
+	.footer__form-heading {
+		margin-top: 0;
+	}
+
+	.footer__submit-container {
+		margin-top: 36px;
+	}
+
+	.footer__btn {
+		padding: 16px 34px;
+	}
+
+}
+
+/* ================= 960px ================= */
+@media (max-width: 960px) {
+
+	/* ------ how we work ------ */
+
+	.how-we-work__nav {
+		justify-content: space-between;
+	}
+
+	.how-we-work__heading {
+		margin-top: 79px;
+	}
+
+	.how-we-work__info-container {
+		margin-top: 50px;
+		flex-direction: column;
+	}
+
+	.how-we-work__description-column {
+		margin-right: 0;
+		flex: 0 0 0;
+		max-width: 760px;
+	}
+
+	.how-we-work__sub-heading {
+		margin-top: 40px;
+	}
+
+	.how-we-work__btn-container {
+		margin-top: 22px;
+	}
+
+	.how-we-work__img-column {
+		flex: 0 0 0;
+		margin-top: 0;
+		width: 100%;
+		min-height: 284px;
+		order: -1;
+	}
+
+	/*------ footer ------*/
+
+	.footer {
+		margin-top: 84px;
+	}
+
+	.footer__container {
+		flex-direction: column;
+	}
+
+	.footer__form-heading {
+		margin-top: 0;
+	}
+
+	.footer__form-column {
+		width: 100%;
+		order: -1;
+	}
+
+	.footer__form {
+		transform: translateX(0);
+		max-width: 100%;
+	}
+
+	.footer__submit-container {
+		margin-top: 34px;
+	}
+
+	.footer__nav-column {
+		margin-top: 50px;
+	}
+
+	.footer__nav-list {
+		display: none;
+	}
+
+	.footer__social-media-list {
+		margin-top: 16px;
+	}
+}
+
+/* ================= 768px ================= */
+@media (max-width: 768px) {
+
+	/*------ header -------*/
+
+	.section__heading {
+		margin-top: 83px;
+	}
+	
+	.header__container {
+		height: 68px;
+	}
+
+	/*------ hero -------*/
+
+	.hero__slider {
+		height: 662px;
+	}
+	
+	.hero__info-container {
+		left: 40px;
+		margin-right: 40px;
+		max-width: 590px;
+	}
+
+	.hero__heading {
+		font-size: 50px;
+	}
+
+	.hero__description {
+		font-size: 18px;
+	}
+
+	/*------ about us ------*/
+
+	.about-us__cards-container {
+		margin-top: 60px;
+	}
+
+	.about-us__cards-list {
+		min-width: 665px;
+	}
+
+	.about-us__hero-card {
+		min-height: 650px;
+	}
+
+	.about-us__overlay {
+		padding: 40px;
+	}
+
+	.about-us__overlay-text {
+		margin-right: 45px;
+	}
+
+	.about-us__card {
+		padding: 36px 40px;
+		min-height: 220px;
+	}
+
+	.about-us__card:not(:last-child) {
+		margin-bottom: 28px;
+	}
+
+	.about-us__hero-card-btn {
+		padding: 18px 35px;
+	}
+
+	.about-us__card-info {
+		padding-left: 129px;
+	}
+
+	.about-us__card-info::before {
+		width: 114px;
+		height: 99px;
+		left: -1px;
+	}
+
+	/*------ faq ------*/
+
+	.faq__list {
+		margin-top: 30px;
+	}
+	
+	.faq__question-text {
+		line-height: 31px;
+	}
+
+	.faq__question-btn {
+		margin-left: 40px;
+	}
+
+}

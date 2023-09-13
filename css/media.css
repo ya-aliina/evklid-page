@@ -1,11 +1,17 @@
 
 /* ================= 1490px ================= */
-@media (max-width: 1492px) {
-	.about-us__cards-list {
-		padding-left: 0;
+@media (max-width: 1490px) {
+	
+	.about-us__cards-container {
+		display: flex;
+		flex-direction: column;
 	}
 
-	.about-us__hero-card {
+	.about-us__cards-list-column {
+		margin-left: 0;
+	}
+
+	.about-us__hero-card-column {
 		margin-bottom: 32px;
 	}
 
@@ -16,10 +22,7 @@
 	.footer__form-column {
 		transform: none;
 	}
-}
 
-/* ================= 1174px ================= */
-@media (max-width: 1174px) {
 	.header__burger-btn {
 		display: inline-block;
 	}
@@ -35,6 +38,7 @@
 
 /* ================= 1024px ================= */
 @media (max-width: 1024px) {
+	
 	header,
 	section,
 	footer {
@@ -62,37 +66,10 @@
 		transform: translateX(-3px);
 	}
 
-	/*------ about us ------*/
-
-	.about-us__text {
-		margin-top: 8px;
-	}
-	
-	.about-us__cards-container {
-		margin-top: 63px;
-	}
-
-	.about-us__hero-card {
-		margin-right: 0;
-		width: 100%;
-		min-height: 641px;
-	}
-
-	.about-us__card {
-		padding: 65px 77px;
-	}
-
 	/*------ hero ------*/
 
 	.hero__info-container {
-		top: 162px;
-		left: 77px;
-		margin-right: 77px;
-		max-width: 780px;
-	}
-
-	.hero__slider {
-		height: 670px;
+		padding: 160px 77px;
 	}
 
 	.hero__heading {
@@ -110,6 +87,22 @@
 		padding: 22px 32px;
 	}
 
+	/*------ about us ------*/
+
+	.about-us__text {
+		margin-top: 8px;
+	}
+	
+	.about-us__cards-container {
+		margin-top: 63px;
+	}
+
+	.about-us__card {
+		padding: 65px 77px;
+	}
+
+	/*------ how we work ------*/
+	
 	.how-we-work__btn-container {
 		margin-top: 25px;
 	}
@@ -246,16 +239,10 @@
 
 	/*------ hero -------*/
 
-	.hero__slider {
-		height: 662px;
+	.hero__info-container {
+		padding: 160px 40px;
 	}
 	
-	.hero__info-container {
-		left: 40px;
-		margin-right: 40px;
-		max-width: 590px;
-	}
-
 	.hero__heading {
 		font-size: 50px;
 	}
@@ -266,24 +253,12 @@
 
 	/*------ about us ------*/
 
-	.about-us__cards-container {
+	 .about-us__cards-container {
 		margin-top: 60px;
-	}
+	} 
 
-	.about-us__cards-list {
-		min-width: 665px;
-	}
-
-	.about-us__hero-card {
-		min-height: 650px;
-	}
-
-	.about-us__overlay {
-		padding: 40px;
-	}
-
-	.about-us__overlay-text {
-		margin-right: 45px;
+	.about-us__hero-overlay {
+		padding: 34px 40px;;
 	}
 
 	.about-us__card {
@@ -295,19 +270,14 @@
 		margin-bottom: 28px;
 	}
 
+	.about-us__card-img  {
+		margin-right: 0;
+	}
+
 	.about-us__hero-card-btn {
 		padding: 18px 35px;
 	}
 
-	.about-us__card-info {
-		padding-left: 129px;
-	}
-
-	.about-us__card-info::before {
-		width: 114px;
-		height: 99px;
-		left: -1px;
-	}
 
 	/*------ faq ------*/
 
@@ -320,7 +290,409 @@
 	}
 
 	.faq__question-btn {
-		margin-left: 40px;
+		margin-left: 20px;
 	}
 
+	/*------ footer ------*/
+
+	.footer {
+		margin-top: 80px;
+	}
+
+	.footer__form-heading {
+		margin-top: 0;
+	}
+}
+
+/* ================= 680px ================= */
+@media (max-width: 680px) {
+	
+	header,
+	section,
+	footer {
+		padding: 0 15px;
+	}
+
+	.btn,
+	.accent-btn-filled,
+	.accent-btn-bordered {
+		padding: 11px 42px;
+	}
+
+	/*------ about us ------*/
+
+	.about-us__hero-card,
+	.about-us__hero-img,
+	.about-us__hero-overlay {
+		position: static;
+	}
+
+	.about-us__hero-card {
+		min-height: initial;
+	}
+
+	.about-us__hero-img {
+		height: auto;
+	}
+
+	.about-us__hero-overlay {
+		margin-top: 7px;
+		padding: 0;
+		flex-direction: column;
+		min-height: auto;
+		background: none;
+		align-items: flex-start;
+	}
+
+	.about-us__hero-overlay-text {
+		margin-right: 0;
+		color: var(--main-text-color);
+		font-weight: 400;
+		line-height: 28px;
+	}
+
+	.about-us__hero-overlay-btn {
+		align-self: flex-start;
+		padding: 11px 42px;
+		margin-top: 10px;
+		color: var(--accent-color);
+	}
+
+	.about-us__hero-overlay-btn:hover {
+		color: var(--reverso-main-text-color);
+	}
+	
+	.about-us__card {
+		flex-direction: column;
+	}
+	
+	.about-us__card-img {
+		align-self: start;
+	}
+
+	.about-us__card-info {
+		margin-left: 0;
+	}
+
+	.about-us__card:not(:last-child) {
+		margin-bottom: 33px;
+	}
+
+	.about-us__card-img {
+		margin-bottom: 15px;
+		width: 90px;
+		height: 90px;
+	}
+}
+
+/* ================= 540px ================= */
+@media (max-width: 540px) {
+	
+	.section__heading {
+		margin-top: 70px;
+		font-size: 32px;
+	}
+
+	.hero__info-container {
+		padding: 100px 40px;
+	}
+
+	.hero__heading {
+		font-size: 34px;
+	}
+
+	.hero__description {
+		font-size: 17px;
+	}
+
+	.hero__btn {
+		margin-top: 35px;
+		font-size: 18px;
+	}
+
+	.about-us__card {
+		padding: 15px;
+	}
+
+	.how-we-work__nav-item:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	.how-we-work__accent-btn-filled {
+		margin-bottom: 10px;
+	}
+
+	.footer__submit-container {
+		margin-top: 15px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.footer__nav-column {
+		align-self: center;
+	}
+
+	.footer__logo-link {
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer__social-media-list {
+		justify-content: center;
+	}
+}
+
+/* ================= 320px ================= */
+@media (max-width: 320px) {
+
+	body {
+		font-size: 14px;
+	}
+
+	.btn,
+	.accent-btn-filled,
+	.accent-btn-bordered {
+		padding: 11px 42px;
+		margin-top: 10px;
+		font-size: 12px;
+	}
+
+	.section__heading {
+		margin-top: 61px;
+		font-size: 24px;
+	}
+
+	/*------ header ------*/
+
+	.header__logo-img {
+		width: 110px;
+		height: 35px;
+	}
+
+	/*------ hero ------*/
+
+	.hero__info-container {
+		padding: 60px 21px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.hero__heading {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.hero__description {
+		margin-top: 8px;
+		max-width: 245px;
+		font-size: 12px;
+		text-align: center;
+		align-self: center;
+	}
+
+	.hero__btn {
+		margin-top: 34px;
+		font-size: 12px;
+		padding: 10px 25px;
+		align-self: center;
+	}
+
+	/* ------ about us -------- */
+
+	.about-us__text {
+		margin-top: 19px;
+	}
+
+	.about-us__cards-container {
+		margin-top: 15px;
+	}
+
+	.about-us__hero-card,
+	.about-us__hero-img,
+	.about-us__hero-overlay {
+		position: static;
+	}
+
+	.about-us__hero-card {
+		min-height: initial;
+	}
+
+	.about-us__hero-img {
+		height: auto;
+	}
+
+	.about-us__hero-overlay {
+		margin-top: 7px;
+		padding: 0;
+		flex-direction: column;
+		min-height: auto;
+		background: none;
+	}
+
+	.about-us__hero-overlay-text {
+		margin-right: 0;
+		color: var(--main-text-color);
+		font-weight: 400;
+		line-height: 28px;
+	}
+
+	.about-us__hero-overlay-btn {
+		align-self: flex-start;
+		padding: 11px 42px;
+		margin-top: 10px;
+		font-size: 12px;
+		color: var(--accent-color);
+	}
+
+	.about-us__card {
+		padding: 0;
+		border: none;
+		flex-direction: column;
+	}
+
+	.about-us__card-img {
+		margin-bottom: 4px;
+		width: 64px;
+		height: 57px;
+	}
+
+	.about-us__card-heading {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 4px;
+	}
+
+	/*------ how we work ------*/
+
+	.how-we-work__nav {
+		margin-top: 21px;
+	}
+
+	.how-we-work__nav-item {
+		font-size: 14px;
+	}
+
+	.how-we-work__nav-item:not(:last-child) {
+		margin-right: 5px;
+	}
+
+	.how-we-work__info-container {
+		margin-top: 15px;
+	}
+
+	.how-we-work__img-column {
+		min-height: 160px;
+	}
+
+	.how-we-work__sub-heading {
+		margin-top: 16px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.how-we-work__btn-container {
+		margin-top: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.how-we-work__accent-btn-filled {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+
+	.how-we-work__btn {
+		padding: 10px 32px;
+	}
+
+	/*------ faq ------*/
+
+	.faq__question-text {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 24px;
+		max-width: 243px;
+	}
+
+	.faq__list {
+		margin-top: 14px;
+	}
+
+	.faq__question-btn-icon {
+		width: 30px;
+		height: 30px;
+	}
+
+	/*------ footer ------*/
+
+	.footer {
+		margin-top: 61px;
+	}
+
+	.footer__container {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.footer__form-heading {
+		margin-top: 0;
+	}
+
+	.footer__form-input,
+	.footer__form-textarea {
+		padding: 16px 24px;
+	}
+
+	.footer__form-input:first-of-type {
+		margin-top: 20px ;
+	}
+
+	.footer__form-input::placeholder,
+	.footer__form-textarea::placeholder {
+		font-size: 14px;
+	}
+
+	.footer__form-input,
+	.footer__form-textarea {
+		padding: 13px 20px;
+	}
+
+	.footer__btn {
+		padding: 13px 28px;
+		margin: 0;
+		border: none;
+	}
+
+	.footer__agreement {
+		margin: 11px 0;
+		font-size: 16px;
+	}
+	
+	.footer__nav-column {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	.footer__logo-img {
+		width: 131px;
+		height: 42px;
+	}
+
+	.footer__social-media-list {
+		align-self: center;
+	}
+
+	.footer__social-media-icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	.footer__submit-container {
+		margin-top: 26px;
+		border-bottom: 1px solid #595959;
+	}
 }

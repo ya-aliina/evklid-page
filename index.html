@@ -101,7 +101,7 @@
 
 <!-- ================= ABOUT US start ================= -->
 		<section class="about-us">
-			<div class="container">
+			<div class="container about-us__container">
 				<h2 class="about-us__heading section__heading">
 					О нас
 				</h2>
@@ -114,33 +114,43 @@
 					отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта
 					способствует повышению качества экспериментов.
 				</p>
+
 				<div class="about-us__cards-container">
-					<div class="about-us__hero-card">
-						<div class="about-us__overlay">
-							<div class="about-us__overlay-text">
-								Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации
-								новых
-								принципов.
+					<div class="about-us__hero-card-column">
+						<div class="about-us__hero-card">
+							<img class="about-us__hero-img" src="./img/about-us-hero-card.jpg" alt="">
+							
+							<div class="about-us__hero-overlay">
+								<p class="about-us__hero-overlay-text">
+									Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации
+									новых принципов.
+								</p>
+								<a class="about-us__hero-overlay-btn accent-btn-bordered" href="#">
+									Подробнее
+								</a>
 							</div>
-							<a class="about-us__hero-card-btn accent-btn-bordered" href="#">
-								Подробнее
-							</a>
 						</div>
 					</div>
-					<ul class="about-us__cards-list">
+					<ul class="about-us__cards-list-column">
 						<li class="about-us__card">
-							<div class="about-us__card-info about-us__card-info-1">
+							<img class="about-us__card-img" src="./img/about-us-box.svg" alt="" aria-hidden="true">
+							
+							<div class="about-us__card-info">
 								<h3 class="about-us__card-heading">
 									Консультация с широким активом
 								</h3>
 								<p class="about-us__card-text">
-									А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне
+									А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и
+									внешне
 									зависимых концептуальных решений.
 								</p>
 							</div>
 						</li>
+
 						<li class="about-us__card">
-							<div class="about-us__card-info about-us__card-info-2">
+							<img class="about-us__card-img" src="./img/about-us-gear.svg" alt="" aria-hidden="true">
+						
+							<div class="about-us__card-info">
 								<h3 class="about-us__card-heading">
 									В своём стремлении повысить
 								</h3>
@@ -151,6 +161,7 @@
 								</p>
 							</div>
 						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -224,11 +235,12 @@
 				<ul class="faq__list">
 					<li class="faq__item">
 						<div class="faq__question">
-							<span class="faq__question-text">
+							<p class="faq__question-text">
 								Из чего формируется конечная стоимость проекта?
-							</span>
+							</p>
 							<button class="faq__question-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
+								<svg class="faq__question-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+									fill="none">
 									<circle cx="25" cy="25" r="25" fill="#ECECEC" />
 									<path fill="#666" fill-rule="evenodd"
 										d="M25.057 24.057V9h.886v15.057H41v.886H25.943V40h-.886V24.943H10v-.886h15.057Z" clip-rule="evenodd" />
@@ -239,11 +251,11 @@
 					</li>
 					<li class="faq__item">
 						<div class="faq__question">
-							<span class="faq__question-text">
+							<p class="faq__question-text">
 								У меня есть свой проект. Сможем ли мы его доработать <span class="fade-text">/</span> реализовать?
-							</span>
+							</p>
 							<button class="faq__question-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
+								<svg class="faq__question-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"  fill="none">
 									<circle cx="25" cy="25" r="25" fill="#ECECEC" />
 									<path fill="#666" fill-rule="evenodd"
 										d="M25.057 24.057V9h.886v15.057H41v.886H25.943V40h-.886V24.943H10v-.886h15.057Z" clip-rule="evenodd" />
@@ -254,11 +266,12 @@
 					</li>
 					<li class="faq__item">
 						<div class="faq__question">
-							<span class="faq__question-text">
+							<p class="faq__question-text">
 								Я выбираю между разными компаниями. В чём ваше отличие?
-							</span>
+							</p>
 							<button class="faq__question-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
+								<svg class="faq__question-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+									fill="none">
 									<circle cx="25" cy="25" r="25" fill="#ECECEC" />
 									<path fill="#666" fill-rule="evenodd"
 										d="M25.057 24.057V9h.886v15.057H41v.886H25.943V40h-.886V24.943H10v-.886h15.057Z" clip-rule="evenodd" />
@@ -269,11 +282,12 @@
 					</li>
 					<li class="faq__item">
 						<div class="faq__question">
-							<span class="faq__question-text">
+							<p class="faq__question-text">
 								Могу ли я делегировать вам работу <span class="fade-text">/</span> согласование с подрядчиком <span class="fade-text">/</span> организацией?
-							</span>
+							</p>
 							<button class="faq__question-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
+								<svg class="faq__question-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+									fill="none">
 									<circle cx="25" cy="25" r="25" fill="#ECECEC" />
 									<path fill="#666" fill-rule="evenodd"
 										d="M25.057 24.057V9h.886v15.057H41v.886H25.943V40h-.886V24.943H10v-.886h15.057Z" clip-rule="evenodd" />
@@ -284,11 +298,12 @@
 					</li>
 					<li class="faq__item">
 						<div class="faq__question">
-							<span class="faq__question-text">
+							<p class="faq__question-text">
 								Могу ли я вернуть деньги на каком-либо из этапов работ?
-							</span>
+							</p>
 							<button class="faq__question-btn">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none">
+								<svg class="faq__question-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50"
+									fill="none">
 									<circle cx="25" cy="25" r="25" fill="#ECECEC" />
 									<path fill="#666" fill-rule="evenodd"
 										d="M25.057 24.057V9h.886v15.057H41v.886H25.943V40h-.886V24.943H10v-.886h15.057Z" clip-rule="evenodd" />
@@ -309,7 +324,7 @@
 		<div class="container footer__container">
 			<div class="footer__nav-column">
 				<a class="footer__logo-link" href="#">
-					<img class="footet__logo-img" src="../img/logo-reverso.svg" alt="Логотип компании Евклид">
+					<img class="footer__logo-img" src="../img/logo-reverso.svg" alt="Логотип компании Евклид">
 				</a>
 				<ul class="footer__nav-list">
 					<li class="footer__nav-item">
@@ -358,9 +373,9 @@
 							</svg>
 						</a>
 					</li>
-					<li class="footer__social-media-item ">
+					<li class="footer__social-media-item">
 						<a class="footer__social-media-link border-focus" href="#">
-							<svg class="footer__social-media-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none">
+							<svg class="footer__social-media-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
 								<g fill="#7C7C7C" clip-path="url(#a)">
 									<path d="M24.258 30a5.742 5.742 0 1 0 11.484 0 5.742 5.742 0 0 0-11.484 0Z" />
 									<path

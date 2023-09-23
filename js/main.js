@@ -24,8 +24,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function setActiveTab(tab) {
         const path = tab.dataset.path;
+        const tabInfoList = document.querySelectorAll('.how-we-work__tab-info');
 
-        document.querySelectorAll('.how-we-work__tab-info').forEach(function (tabInfo) {
+        tabInfoList.forEach(function (tabInfo) {
             tabInfo.classList.remove('how-we-work__tab-active');
         });
 
@@ -33,11 +34,19 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     function openModalDialog() {
+        const firstMenuItem = document.querySelector('.header__modal-nav-link');
+
         modalDialog.classList.add('is-active');
+        modalDialog.setAttribute('aria-hidden', 'false');
+        setTimeout(function () {
+            firstMenuItem.focus();
+        }, 100);
+
     }
 
     function closeModalDialog() {
         modalDialog.classList.remove('is-active');
+        modalDialog.setAttribute('aria-hidden', 'true');
     }
 
     $(function () {

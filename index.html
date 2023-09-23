@@ -31,23 +31,7 @@
 <!-- ================= HEADER start ================= -->
 	<header class="header">
 		<div class="container header__container">
-			<button class="header__burger-btn border-focus" id="burger-btn">
-				<svg class="header__burger-btn-img" width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="30" height="3" fill="#333333" />
-					<rect y="10" width="30" height="3" fill="#333333" />
-					<rect y="20" width="30" height="3" fill="#333333" />
-				</svg>
-			</button>
-
-            <div class="header__modal-dialog" id="header__modal-dialog">
-                <button class="header__modal-close-btn" id="modal-close-btn">
-                    <svg class="header__modal-close-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"
-                        preserveAspectRatio="xMidYMid meet">
-                        <path
-                            d="M223 5102c-95-34-145-78-194-172-18-36-23-62-23-125-2-153-82-61 1030-1175 1079-1082 1017-1012 999-1108-6-33-117-148-999-1032C-72 380 5 468 5 320 6 139 139 6 320 5c148 0 60-77 1170 1031 884 882 999 993 1033 999 95 18 25 80 1107-999C4740-72 4652 5 4800 5c181 1 314 134 315 315 0 148 77 60-1031 1170-1079 1082-1017 1012-999 1108 6 33 117 148 999 1032 1108 1110 1031 1022 1031 1170-1 181-134 314-315 315-148 0-60 77-1170-1031-1082-1079-1012-1017-1107-999-34 6-148 116-1028 995-830 829-998 993-1040 1011-69 30-165 35-232 11z"
-                            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none" />
-                    </svg>
-                </button>
+            <div class="header__modal-dialog" id="header__modal-dialog" aria-hidden="true" aria-modal="true" tabindex="-1">
                 <nav class="header__modal-nav">
                     <ul class="header__modal-nav-list">
                         <li class="header__modal-nav-item">
@@ -77,8 +61,26 @@
                         </li>
                     </ul>
                 </nav>
-            </div class="modal-dialog">
-			<a class="header__logo-link" href="#">
+                <button class="header__modal-close-btn border-focus" id="modal-close-btn" aria-label="Закрыть меню">
+                    <svg class="header__modal-close-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+                        <path
+                            d="M223 5102c-95-34-145-78-194-172-18-36-23-62-23-125-2-153-82-61 1030-1175 1079-1082 1017-1012 999-1108-6-33-117-148-999-1032C-72 380 5 468 5 320 6 139 139 6 320 5c148 0 60-77 1170 1031 884 882 999 993 1033 999 95 18 25 80 1107-999C4740-72 4652 5 4800 5c181 1 314 134 315 315 0 148 77 60-1031 1170-1079 1082-1017 1012-999 1108 6 33 117 148 999 1032 1108 1110 1031 1022 1031 1170-1 181-134 314-315 315-148 0-60 77-1170-1031-1082-1079-1012-1017-1107-999-34 6-148 116-1028 995-830 829-998 993-1040 1011-69 30-165 35-232 11z"
+                            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none" />
+                    </svg>
+                </button>
+            </div>
+
+            <button class="header__burger-btn border-focus" id="burger-btn" aria-label="Показать меню" tabindex="0">
+                <svg class="header__burger-btn-img" width="30" height="23" viewBox="0 0 30 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="30" height="3" fill="#333333" />
+                    <rect y="10" width="30" height="3" fill="#333333" />
+                    <rect y="20" width="30" height="3" fill="#333333" />
+                </svg>
+            </button>
+
+			<a class="header__logo-link border-focus" href="#">
 				<img class="header__logo-img" src="../img/logo.svg" alt="Логотип компании Евклид">
 			</a>
 			<nav class="header__main-nav">
@@ -110,7 +112,7 @@
 					</li>
 				</ul>
 			</nav>
-			<button class="header__search-btn border-focus">
+			<button class="header__search-btn border-focus" aria-label="Поиск">
 				<svg class="header__search-btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
 					<path fill="#333" d="M18.606 17.376 24 22.675l-1.348 1.324-5.394-5.298z" />
 					<path stroke="#333" stroke-width="2"
@@ -147,7 +149,7 @@
                         <p class="hero__description">
                             Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
                         </p>
-                        <a class="hero__btn accent-btn-filled" href="#">
+                        <a class="hero__btn accent-btn-filled" href="#" role="button">
                             Заказать расчёт
                         </a>
                     </div>
@@ -182,7 +184,7 @@
 									Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации
 									новых принципов.
 								</p>
-								<a class="about-us__hero-overlay-btn accent-btn-bordered" href="#">
+								<a class="about-us__hero-overlay-btn accent-btn-bordered" href="#" role="button">
 									Подробнее
 								</a>
 							</div>
@@ -577,7 +579,7 @@
 				</ul>
 				<ul class="footer__social-media-list">
 					<li class="footer__social-media-item">
-						<a class="footer__social-media-link border-focus" href="#">
+						<a class="footer__social-media-link border-focus" href="#" aria-label="facebook">
 							<svg class="footer__social-media-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M30 0C13.5 0 0 13.5241 0 30.1807C0 45.241 10.98 57.741 25.32 60V38.9157H17.7V30.1807H25.32V23.5241C25.32 15.9639 29.79 11.8072 36.66 11.8072C39.93 11.8072 43.3499 12.3795 43.3499 12.3795V19.8193H39.57C35.85 19.8193 34.68 22.1386 34.68 24.5181V30.1807H43.0199L41.6699 38.9157H34.68V60C41.7493 58.8791 48.1866 55.2576 52.8297 49.7893C57.4729 44.3211 60.016 37.3664 59.9999 30.1807C59.9999 13.5241 46.4999 0 30 0Z"
@@ -586,7 +588,7 @@
 						</a>
 					</li>
 					<li class="footer__social-media-item">
-						<a class="footer__social-media-link border-focus" href="#">
+						<a class="footer__social-media-link border-focus" href="#" aria-label="instagram">
 							<svg class="footer__social-media-icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
 								<g fill="#7C7C7C" clip-path="url(#a)">
 									<path d="M24.258 30a5.742 5.742 0 1 0 11.484 0 5.742 5.742 0 0 0-11.484 0Z" />

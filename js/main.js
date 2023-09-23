@@ -1,5 +1,11 @@
-window.addEventListener('DOMContentLoaded', function() {
-   const swiper = new Swiper('.hero__swiper', {
+window.addEventListener('DOMContentLoaded', function () {
+    const tabsList = document.querySelectorAll('.how-we-work__tab');
+    const modalDialog = document.querySelector('#header__modal-dialog');
+    const burgerBtn = document.querySelector('#burger-btn');
+    const modalCloseBtn = document.querySelector('#modal-close-btn');
+    const modalItemsList = document.querySelectorAll('.header__modal-nav-item');
+
+    const swiper = new Swiper('.hero__swiper', {
         direction: 'horizontal',
         loop: true,
 
@@ -16,35 +22,23 @@ window.addEventListener('DOMContentLoaded', function() {
         scrollbar: false,
     });
 
-    document.querySelectorAll('.how-we-work__tab').forEach(function(tab) {
+    function setActiveTab(tab) {
+        const path = tab.dataset.path;
 
-        tab.addEventListener('click', function(event) {
-            const path = event.currentTarget.dataset.path;
+        document.querySelectorAll('.how-we-work__tab-info').forEach(function (tabInfo) {
+            tabInfo.classList.remove('how-we-work__tab-active');
+        });
 
-            document.querySelectorAll('.how-we-work__tab-info').forEach(function(tabInfo) {
-                tabInfo.classList.remove('how-we-work__tab-active');
-            });
+        document.querySelector(`[data-target="${path}"]`).classList.add('how-we-work__tab-active');
+    }
 
-            document.querySelector(`[data-target="${path}"]`).classList.add('how-we-work__tab-active');
-        })
-    })
-
-    const modalDialog = document.querySelector('#header__modal-dialog');
-
-    document.querySelector('#burger-btn').addEventListener('click', function() {
+    function openModalDialog() {
         modalDialog.classList.add('is-active');
+    }
 
-    });
-
-    document.querySelector('#modal-close-btn').addEventListener('click', function() {
+    function closeModalDialog() {
         modalDialog.classList.remove('is-active');
-    });
-
-    document.querySelectorAll('.header__modal-nav-item').forEach(function(navItem) {
-        navItem.addEventListener('click', function() {
-            modalDialog.classList.remove('is-active');
-        })
-    })
+    }
 
     $(function () {
         $("#faq__list").accordion({
@@ -55,6 +49,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
     });
 
+    tabsList.forEach(function (tab) {
+        tab.addEventListener('click', function (event) {
+            setActiveTab(event.currentTarget);
+        });
+    });
 
+    burgerBtn.addEventListener('click', openModalDialog);
+
+    modalCloseBtn.addEventListener('click', closeModalDialog);
+
+    modalItemsList.forEach(function (navItem) {
+        navItem.addEventListener('click', closeModalDialog);
+    });
 
 })

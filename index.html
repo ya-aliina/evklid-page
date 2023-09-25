@@ -31,52 +31,45 @@
 <!-- ================= HEADER start ================= -->
 	<header class="header">
 		<div class="container header__container">
-            <div class="header__modal-dialog" id="header__modal-dialog" aria-hidden="true" aria-modal="true" tabindex="-1">
-                <nav class="header__modal-nav">
-                    <ul class="header__modal-nav-list">
-                        <li class="header__modal-nav-item">
-                            <a class="header__modal-nav-link border-focus" href="#">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="header__modal-nav-item">
-                            <a class="header__modal-nav-link border-focus" href="#">
-                                Проекты
-                            </a>
-                        </li>
-                        <li class="header__modal-nav-item">
-                            <a class="header__modal-nav-link border-focus" href="#">
-                                Этапы
-                            </a>
-                        </li>
-                        <li class="header__modal-nav-item">
-                            <a class="header__modal-nav-link border-focus" href="#">
-                                Отзывы
-                            </a>
-                        </li>
-                        <li class="header__modal-nav-item">
-                            <a class="header__modal-nav-link border-focus" href="#">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="header__modal-close-btn border-focus" id="modal-close-btn" aria-label="Закрыть меню">
-                    <svg class="header__modal-close-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-                        <path
-                            d="M223 5102c-95-34-145-78-194-172-18-36-23-62-23-125-2-153-82-61 1030-1175 1079-1082 1017-1012 999-1108-6-33-117-148-999-1032C-72 380 5 468 5 320 6 139 139 6 320 5c148 0 60-77 1170 1031 884 882 999 993 1033 999 95 18 25 80 1107-999C4740-72 4652 5 4800 5c181 1 314 134 315 315 0 148 77 60-1031 1170-1079 1082-1017 1012-999 1108 6 33 117 148 999 1032 1108 1110 1031 1022 1031 1170-1 181-134 314-315 315-148 0-60 77-1170-1031-1082-1079-1012-1017-1107-999-34 6-148 116-1028 995-830 829-998 993-1040 1011-69 30-165 35-232 11z"
-                            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none" />
-                    </svg>
-                </button>
-            </div>
 
-            <button class="header__burger-btn border-focus" id="burger-btn" aria-label="Показать меню">
-                <svg class="header__burger-btn-img" width="30" height="23" viewBox="0 0 30 23" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="30" height="3" fill="#333333" />
-                    <rect y="10" width="30" height="3" fill="#333333" />
-                    <rect y="20" width="30" height="3" fill="#333333" />
+            <nav class="header__modal-nav" id="header__modal-dialog" aria-modal="true" aria-hidden="true">
+                <ul class="header__modal-nav-list">
+                    <li class="header__modal-nav-item">
+                        <a class="header__modal-nav-link border-focus" href="#">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="header__modal-nav-item">
+                        <a class="header__modal-nav-link border-focus" href="#">
+                            Проекты
+                        </a>
+                    </li>
+                    <li class="header__modal-nav-item">
+                        <a class="header__modal-nav-link border-focus" href="#">
+                            Этапы
+                        </a>
+                    </li>
+                    <li class="header__modal-nav-item">
+                        <a class="header__modal-nav-link border-focus" href="#">
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="header__modal-nav-item">
+                        <a class="header__modal-nav-link border-focus" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="header__burger-btn border-focus" id="burger-btn" aria-expanded="false" aria-label="Главное меню"
+                aria-controls="header__modal-nav" tabindex="0">
+                <svg class="header__burger-icon" width="100" height="100" viewBox="0 19 100 60">
+                    <path class="header__burger-line header__burger-line-1 line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="header__burger-line header__burger-line-2 line line2" d="M 20,50 H 80" />
+                    <path class="header__burger-line header__burger-line-3 line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                 </svg>
             </button>
 
@@ -112,6 +105,7 @@
 					</li>
 				</ul>
 			</nav>
+
 			<button class="header__search-btn border-focus" aria-label="Поиск">
 				<svg class="header__search-btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
 					<path fill="#333" d="M18.606 17.376 24 22.675l-1.348 1.324-5.394-5.298z" />
@@ -133,7 +127,6 @@
 
                     <div class="swiper hero__swiper">
                         <div class="swiper-wrapper hero__swiper-wrapper">
-                            <!-- Slides -->
                             <div class="swiper-slide hero__swiper-slide hero__swiper-slide-1"></div>
                             <div class="swiper-slide hero__swiper-slide hero__swiper-slide-2"></div>
                             <div class="swiper-slide hero__swiper-slide hero__swiper-slide-3"></div>
@@ -234,30 +227,22 @@
 				<h2 class="section__heading how-we-work__heading">
 					Как мы работаем
 				</h2>
-				<ul class="how-we-work__nav" id="how-we-work__nav">
-					<li class="how-we-work__tab" data-path="one">
-						<a href="#how-we-work" class="how-we-work__nav-link border-focus">
-							1 шаг
-						</a>
+				<ul class="how-we-work__nav" id="how-we-work__nav" role="tablist">
+					<li class="how-we-work__tab is-active border-focus" data-path="one" role="tab" tabindex="0">
+                        1 шаг
 					</li>
-					<li class="how-we-work__tab" data-path="two">
-						<a href="#how-we-work" class="how-we-work__nav-link border-focus">
-							2 шаг
-						</a>
+					<li class="how-we-work__tab border-focus" data-path="two" role="tab" tabindex="0">
+                        2 шаг
 					</li>
-					<li class="how-we-work__tab" data-path="three">
-						<a href="#how-we-work" class="how-we-work__nav-link border-focus">
-							3 шаг
-						</a>
+					<li class="how-we-work__tab border-focus" data-path="three" role="tab" tabindex="0">
+                        3 шаг
 					</li>
-					<li class="how-we-work__tab" data-path="four">
-						<a href="#how-we-work" class="how-we-work__nav-link border-focus">
-							4 шаг
-						</a>
+					<li class="how-we-work__tab border-focus" data-path="four" role="tab" tabindex="0">
+                        4 шаг
 					</li>
 				</ul>
 
-				<div class="how-we-work__tab-info how-we-work__tab-active" data-target="one">
+				<div class="how-we-work__tab-info is-active" data-target="one">
 					<div class="how-we-work__description-column">
 
 						<div class="how-we-work__info-container">
@@ -287,7 +272,7 @@
 					</div>
 					<div class="how-we-work__img-column how-we-work__img-1"></div>
 				</div>
-				<div class="how-we-work__tab-info" data-target="two">
+				<div class="how-we-work__tab-info" data-target="two" role="tabpanel">
 					<div class="how-we-work__description-column">
 
 						<div class="how-we-work__info-container">
@@ -313,7 +298,7 @@
 					</div>
 					<div class="how-we-work__img-column how-we-work__img-2"></div>
 				</div>
-				<div class="how-we-work__tab-info" data-target="three">
+				<div class="how-we-work__tab-info" data-target="three" role="tabpanel">
 					<div class="how-we-work__description-column">
 
 						<div class="how-we-work__info-container">
@@ -340,7 +325,7 @@
 					</div>
 					<div class="how-we-work__img-column how-we-work__img-3"></div>
 				</div>
-				<div class="how-we-work__tab-info" data-target="four">
+				<div class="how-we-work__tab-info" data-target="four" role="tabpanel">
 					<div class="how-we-work__description-column">
 
 						<div class="how-we-work__info-container">

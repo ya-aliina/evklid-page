@@ -2,8 +2,70 @@ window.addEventListener('DOMContentLoaded', function () {
     const tabsList = document.querySelectorAll('.how-we-work__tab');
     const modalDialog = document.querySelector('#header__modal-dialog');
     const burgerBtn = document.querySelector('#burger-btn');
-    const modalCloseBtn = document.querySelector('#modal-close-btn');
-    const modalItemsList = document.querySelectorAll('.header__modal-nav-item');
+
+    function toggleMenu() {
+        const isMenuOpen = burgerBtn.classList.contains('opened');
+
+        if (isMenuOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+            manageMenuFocus();
+        }
+    }
+
+    function closeMenu() {
+        burgerBtn.classList.remove('opened');
+        burgerBtn.setAttribute('aria-expanded', false);
+        modalDialog.classList.remove('is-active');
+        modalDialog.setAttribute('aria-hidden', true)
+    }
+
+    function openMenu() {
+        burgerBtn.classList.add('opened');
+        burgerBtn.setAttribute('aria-expanded', true);
+        modalDialog.classList.add('is-active');
+        modalDialog.setAttribute('aria-hidden', false)
+        burgerBtn.focus();
+    }
+
+    function manageMenuFocus() {
+        const menuItems = document.querySelectorAll('.header__modal-nav-link');
+        const numberOfMenuItems = menuItems.length;
+
+        const firstMenuItem = menuItems[0];
+        const lastMenuItem = menuItems[numberOfMenuItems - 1];
+
+        function handleTabKey(event) {
+            const element = document.activeElement;
+
+            if (event.key === "Tab" && (element === burgerBtn)) {
+                event.preventDefault();
+                firstMenuItem.focus()
+            }
+
+            if (event.key === "Tab" && (element === lastMenuItem)) {
+                event.preventDefault();
+                burgerBtn.focus()
+            }
+
+            if (event.shiftKey && (element === firstMenuItem)) {
+                event.preventDefault();
+                burgerBtn.focus();
+            }
+
+            if (event.shiftKey && (element === burgerBtn)) {
+                event.preventDefault();
+                lastMenuItem.focus();
+            }
+        }
+
+        burgerBtn.addEventListener('keydown', handleTabKey);
+        firstMenuItem.addEventListener('keydown', handleTabKey);
+        lastMenuItem.addEventListener('keydown', handleTabKey);
+    }
+
+    burgerBtn.addEventListener('click', toggleMenu);
 
     const swiper = new Swiper('.hero__swiper', {
         direction: 'horizontal',
@@ -22,31 +84,27 @@ window.addEventListener('DOMContentLoaded', function () {
         scrollbar: false,
     });
 
+    tabsList.forEach(function (tab) {
+        tab.addEventListener('click', function (event) {
+            setActiveTab(event.currentTarget);
+        });
+    });
+
     function setActiveTab(tab) {
         const path = tab.dataset.path;
+        const tabsList = document.querySelectorAll('.how-we-work__tab');
         const tabInfoList = document.querySelectorAll('.how-we-work__tab-info');
 
-        tabInfoList.forEach(function (tabInfo) {
-            tabInfo.classList.remove('how-we-work__tab-active');
+        tabsList.forEach(function(element) {
+            element.classList.remove('is-active');
         });
 
-        document.querySelector(`[data-target="${path}"]`).classList.add('how-we-work__tab-active');
-    }
+        tabInfoList.forEach(function (element) {
+            element.classList.remove('is-active');
+        });
 
-    function openModalDialog() {
-        const firstMenuItem = document.querySelector('.header__modal-nav-link');
-
-        modalDialog.classList.add('is-active');
-        modalDialog.setAttribute('aria-hidden', 'false');
-        setTimeout(function () {
-            firstMenuItem.focus();
-        }, 100);
-
-    }
-
-    function closeModalDialog() {
-        modalDialog.classList.remove('is-active');
-        modalDialog.setAttribute('aria-hidden', 'true');
+        document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
+        tab.classList.add('is-active');
     }
 
     $(function () {
@@ -57,19 +115,4 @@ window.addEventListener('DOMContentLoaded', function () {
         });
 
     });
-
-    tabsList.forEach(function (tab) {
-        tab.addEventListener('click', function (event) {
-            setActiveTab(event.currentTarget);
-        });
-    });
-
-    burgerBtn.addEventListener('click', openModalDialog);
-
-    modalCloseBtn.addEventListener('click', closeModalDialog);
-
-    modalItemsList.forEach(function (navItem) {
-        navItem.addEventListener('click', closeModalDialog);
-    });
-
 })

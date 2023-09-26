@@ -37,26 +37,30 @@ window.addEventListener('DOMContentLoaded', function () {
         const lastMenuItem = menuItems[numberOfMenuItems - 1];
 
         function handleTabKey(event) {
-            const element = document.activeElement;
+            const currentElement = document.activeElement;
 
-            if (event.key === "Tab" && (element === burgerBtn)) {
-                event.preventDefault();
-                firstMenuItem.focus()
+            if (event.key === "Tab") {
+                if (currentElement === burgerBtn) {
+                    event.preventDefault();
+                    firstMenuItem.focus();
+                }
+
+                if (currentElement === lastMenuItem) {
+                    event.preventDefault();
+                    burgerBtn.focus();
+                }
             }
 
-            if (event.key === "Tab" && (element === lastMenuItem)) {
-                event.preventDefault();
-                burgerBtn.focus()
-            }
+            if (event.shiftKey) {
+                if (currentElement === burgerBtn) {
+                    event.preventDefault();
+                    lastMenuItem.focus();
+                }
 
-            if (event.shiftKey && (element === firstMenuItem)) {
-                event.preventDefault();
-                burgerBtn.focus();
-            }
-
-            if (event.shiftKey && (element === burgerBtn)) {
-                event.preventDefault();
-                lastMenuItem.focus();
+                if (currentElement === firstMenuItem) {
+                    event.preventDefault();
+                    burgerBtn.focus();
+                }
             }
         }
 
@@ -84,28 +88,15 @@ window.addEventListener('DOMContentLoaded', function () {
         scrollbar: false,
     });
 
-    tabsList.forEach(function (tab) {
-        tab.addEventListener('click', function (event) {
-            setActiveTab(event.currentTarget);
+    tabsList.forEach(tab => {
+        console.log(tab);
+        tab.addEventListener('click', () => setActiveTab(tab));
+        tab.addEventListener('keydown', event => {
+            if (event.key === "Enter") {
+                setActiveTab(tab);
+            }
         });
     });
-
-    function setActiveTab(tab) {
-        const path = tab.dataset.path;
-        const tabsList = document.querySelectorAll('.how-we-work__tab');
-        const tabInfoList = document.querySelectorAll('.how-we-work__tab-info');
-
-        tabsList.forEach(function(element) {
-            element.classList.remove('is-active');
-        });
-
-        tabInfoList.forEach(function (element) {
-            element.classList.remove('is-active');
-        });
-
-        document.querySelector(`[data-target="${path}"]`).classList.add('is-active');
-        tab.classList.add('is-active');
-    }
 
     $(function () {
         $("#faq__list").accordion({

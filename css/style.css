@@ -179,7 +179,7 @@ footer {
 }
 
 .border-focus:active::before {
-	border-color: none
+	border-color: transparent;
 }
 
 /* ================ HEADER ================ */
@@ -732,11 +732,11 @@ footer {
 
 .faq__question-btn-icon {
     margin-left: 15px;
-    transition: rotate .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .ui-accordion-header-active .faq__question-btn-icon {
-    rotate: 45deg;
+    transform: rotate(45deg);
 }
 
 .faq__answer {

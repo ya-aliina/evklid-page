@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     const tabsList = document.querySelectorAll('.how-we-work__tab');
-    const modalDialog = document.querySelector('#header__modal-dialog');
+    const modalDialog = document.querySelector('#header__modal-nav');
     const burgerBtn = document.querySelector('#burger-btn');
 
     function toggleMenu() {

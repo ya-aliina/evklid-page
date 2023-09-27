@@ -657,7 +657,6 @@ footer {
     background-image: url(../img/how-we-work-4.jpg);
 }
 
-
 /* ================ FAQ ================ */
 
 .faq__list {
@@ -693,7 +692,8 @@ footer {
     transition: border-color .3s linear;
 }
 
-.faq__question:hover::before {
+.faq__question:hover::before,
+.ui-state-focus.faq__question::before {
     border-color: var(--accent-color);
     z-index: 1;
 }
@@ -710,11 +710,13 @@ footer {
 }
 
 .faq__question:hover  .faq__question-btn-icon circle,
+.ui-state-focus .faq__question-btn-icon circle,
 .ui-accordion-header-active  .faq__question-btn-icon circle {
     fill: var(--accent-color);
 }
 
 .faq__question:hover .faq__question-btn-icon path,
+.ui-state-focus .faq__question-btn-icon path,
 .ui-accordion-header-active.faq__question:focus .faq__question-btn-icon path {
     fill: var(--reverso-main-text-color);
 }
@@ -892,6 +894,7 @@ footer {
 .footer__btn {
 	margin-right: 22px;
 	padding: 17px 49px;
+    order: -1;
 }
 
 .footer__agreement {
@@ -926,6 +929,14 @@ footer {
 	flex-grow: 0;
 	outline: 1px solid #FFF;
 	margin-right: 4px;
+}
+
+.footer__agreement-checkbox:focus+label::before {
+	outline: 1px solid var(--accent-color);
+}
+
+.footer__agreement-checkbox:focus+label {
+    color: var(--accent-color);
 }
 
 .footer__agreement-checkbox+label::after {

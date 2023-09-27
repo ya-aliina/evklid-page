@@ -598,19 +598,19 @@
 					<div class="footer__form-heading section__heading">
 						Оставить заявку
 					</div>
-					<input class="footer__form-input" type="text" name="user_name" id="user_name" required placeholder="Фамилия, имя и отчество*">
-					<input class="footer__form-input" type="email" name="email" id="email" required placeholder="E-mail*">
+					<input class="footer__form-input" type="text" name="user_name" id="user_name" required placeholder="Фамилия, имя и отчество*" aria-required="true">
+					<input class="footer__form-input" type="email" name="email" id="email" required placeholder="E-mail*" aria-required="true">
 					<textarea class="footer__form-textarea" name="message" id="message" placeholder="Сообщение"></textarea>
 					<div class="footer__submit-container">
-						<button class="footer__btn accent-btn-filled">
-							Отправить данные
-						</button>
-						<div class="footer__agreement">
-							<input class="footer__agreement-checkbox" type="checkbox" name="agreement-checkbox" id="agreement-checkbox">
+                        <div class="footer__agreement">
+                            <input class="footer__agreement-checkbox" type="checkbox" name="agreement-checkbox" id="agreement-checkbox" aria-required="true">
 							<label class="footer__agreement-label" for="agreement-checkbox">
-								Согласен на обработку данных
+                                Согласен на обработку данных
 							</label>
 						</div>
+                        <button class="footer__btn accent-btn-filled">
+                            Отправить данные
+                        </button>
 					</div>
 				</form>
 			</div>

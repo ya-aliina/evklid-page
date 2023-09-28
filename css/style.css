@@ -586,12 +586,9 @@ footer {
 	margin-top: 47px;
 }
 
-
 .how-we-work__tab-info.is-active {
 	display: flex;
 }
-
-
 
 .how-we-work__description-column {
     flex: 1 1 0;
@@ -602,9 +599,7 @@ footer {
 	margin-right: 142px;
 }
 
-.how-we-work__info-container {
-
-}
+.how-we-work__info-container {}
 
 .how-we-work__sub-heading {
     font-size: 24px;

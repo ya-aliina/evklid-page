@@ -88,9 +88,21 @@ window.addEventListener('DOMContentLoaded', function () {
         scrollbar: false,
     });
 
+    function setActiveTab(tab) {
+        const path = tab.dataset.path;
+        const currentTabInfo = document.querySelector(`[data-target="${path}"]`);
+
+        document.querySelectorAll('.how-we-work__tab, .how-we-work__tab-info').forEach( element => {
+            element.classList.remove('is-active');
+        })
+
+        tab.classList.add('is-active');
+        currentTabInfo.classList.add('is-active');
+    }
+
     tabsList.forEach(tab => {
-        console.log(tab);
         tab.addEventListener('click', () => setActiveTab(tab));
+
         tab.addEventListener('keydown', event => {
             if (event.key === "Enter") {
                 setActiveTab(tab);

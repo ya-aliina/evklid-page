@@ -841,6 +841,7 @@ footer {
 	width: 100%;
 	background-color: #414141;
 	transition: background-color, .3s linear;
+    border-radius: 0;
 }
 
 .footer__form-input:hover,

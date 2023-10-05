@@ -968,3 +968,7 @@ footer {
 	color: #CACACA;
 	line-height: 32px;
 }
+
+.hvr-shutter-in-horizontal:before {
+    background: var(--accent-color);
+}

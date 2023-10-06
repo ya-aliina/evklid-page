@@ -107,8 +107,8 @@ footer {
 	padding: 18px 36px;
 	text-align: center;
 	font-size: 16px;
-	font-style: normal;
 	line-height: 1.2;
+    background-color: transparent;
 	transition-property: color, background-color, border-color;
 	transition-duration: .3s;
 	transition-timing-function: linear;
@@ -119,42 +119,44 @@ footer {
 	color: var(--main-text-color);
 }
 
-.btn:hover,
-.btn:focus {
-	border-color: #666;
-	background-color: #666;;
+.btn::before {
+    background-color: #666;;
 	color: var(--reverso-main-text-color);
 }
 
-.btn:active {
-	border-color: #000000;
-	background-color: #000000;
+.btn:hover,
+.btn:focus {
+    border-color: #666;
 }
 
 .accent-btn-filled,
 .accent-btn-bordered {
-	border: 3px solid var(--accent-color);
+    border: 3px solid var(--accent-color);
 	color: var(--reverso-main-text-color);
 	font-weight: 700;
 }
 
 .accent-btn-filled {
-	background-color: var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+.accent-btn-filled::before {
+    background-color: var(--accent-color-lighter);
 }
 
 .accent-btn-filled:hover,
 .accent-btn-filled:focus {
-	background-color: var(--accent-color-lighter);
-	border-color: var(--accent-color-lighter);
+    border-color: var(--accent-color-lighter);
 }
 
-.accent-btn-bordered:hover,
-.accent-btn-bordered:focus {
-	background-color: var(--accent-color);
+
+.accent-btn-bordered {
+    border: 2px solid var(--accent-color);
+    color: var(--reverso-main-text-color);
 }
 
-.accent-btn-bordered:active {
-	background-color: var(--accent-color-darker);
+.accent-btn-bordered::before {
+    background-color: var(--accent-color);
 }
 
 .border-focus {
@@ -296,6 +298,13 @@ footer {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.2;
+    overflow: initial;
+}
+
+.header__nav-item::before {
+    height: 2px;
+    bottom: -5px;
+    background-color: var(--accent-color-darker);
 }
 
 .header__modal-nav-item {
@@ -311,12 +320,6 @@ footer {
 .header__modal-nav-link:active,
 .header__nav-link:active {
     color: var(--accent-color-darker);
-}
-
-.header__modal-nav-link:active::before,
-.header__nav-link:hover::before,
-.header__nav-link:active::before {
-    border-bottom-color: var(--accent-color-darker);
 }
 
 .header__logo-img {
@@ -967,8 +970,4 @@ footer {
 	max-width: 365px;
 	color: #CACACA;
 	line-height: 32px;
-}
-
-.hvr-shutter-in-horizontal:before {
-    background: var(--accent-color);
 }

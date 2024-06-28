@@ -16,4 +16,4 @@ Dieses Repository enthält ein adaptives Landing Page-Layout, das mit der BEM-Me
 
 ## Vorschau
 
-Sie können die Webseite unter folgendem Link ansehen: https://example.com](https://ya-aliina.github.io/evklid-page/
+Sie können die Webseite unter folgendem Link ansehen: https://ya-aliina.github.io/evklid-page/
